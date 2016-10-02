@@ -1,0 +1,39 @@
+Universal Die Set
+
+Whether you're playing a D&D-based RPG or a GURPS RPG you need dice. A lot of them. And you might not always know exactly which ones you need. With this project you'll have a coin toss, 4, 8, 10, 12, 20, and 100-sided die at your fingertips – oh and need more than one six-sided die? Toss up to 9 at a time. 
+
+Parts list: 
+Arduino (I used a Pro Nano from Sparkfun)
+LED Display (4 digit 7 segment display, also from Sparkfun)
+16 position rotator switch with knob (Sparkfun)
+pizeo-electric sensor (Sparkfun)
+push button (panel mount, spark fun)
+(power switch)
+4AAA battery holder enclosed, with switch ($2 Radio Shack)
+Enclosure (I'm using a Newman's Own Cinnamon Mints tin, exactly the same size as an Altoids tin)
+Electrical and double-stick tape
+hook-up wire
+Silicone caulk
+heat shrink tubing
+
+Tools: 
+Dremel
+soldering iron (+solder)
+Pliers
+diagnol cutters
+wire stripper
+
+Prototyping: 
+
+I laid out all the functionality on a breadboard while my nano and switches were in transit. This allowed me to develop my code in a known environment (since I've done lots of projects with my Duemilnova, and jumper wires are much easier to trace than a new potentiometer. 
+
+The Duemilnove and Nano have 6 Analog inputs and 14 digital input/outputs. 
+
+Inputs for the system are: 
+4 pins from the dial
+1 pin from the push button
+1 analog level from the piezo sensor
+
+Since I have 6 inputs and one of them is analog, I decided to put all my inputs on the analog pins. For the digital inputs on the potentiometer, this simply means listening for a signal above a certain threshold instead of listening for an open/close. Not a big deal. 
+
+Outputs for the system are the 16 pins of my LED display bar. I could have used a driver board to reduce the number of outputs, instead I tied the separator dots to always be on and all the decimal points to always be off. 
